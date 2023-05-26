@@ -5,7 +5,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>home page</div>
+  <div>
+    home page
+    <div>test</div>
+  </div>
 </template>
 
 <style scoped>
