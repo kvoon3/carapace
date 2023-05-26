@@ -4,6 +4,12 @@ import Vue from '@vitejs/plugin-vue2'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import VueMacros from 'unplugin-vue-macros/dist/vite'
+import UnoCSS from 'unocss/vite'
+import legacy from '@vitejs/plugin-legacy'
+import Pages from 'vite-plugin-pages'
+import Layouts from 'vite-plugin-vue-layouts'
+
+import Inspector from 'unplugin-vue-inspector/vite' // OR vite-plugin-vue-inspector
 
 export default defineConfig(({ command, mode }) => {
   // 根据当前工作目录中的 `mode` 加载 .env 文件
@@ -20,6 +26,17 @@ export default defineConfig(({ command, mode }) => {
       },
     },
     plugins: [
+      VueMacros({
+        defineProp: {
+          edition: 'johnsonEdition',
+        },
+        plugins: {
+          vue: Vue({
+            include: [/\.vue$/, /\.setup\.[cm]?[jt]sx?$/],
+          }),
+          // vueJsx: VueJsx(), // if needed
+        },
+      }),
       AutoImport({
         // targets to transform
         include: [
@@ -45,24 +62,26 @@ export default defineConfig(({ command, mode }) => {
         include: [/\.vue$/, /\.vue\?vue/],
         dts: 'src/components.d.ts',
       }),
-      // FIXME: can not render vue components
-      // VueMacros({
-      //   version: 2,
-      //   plugins: {
-      //     vue: vue(),
-      //     // vueJsx: VueJsx(), // if needed
-      //   },
-      // }),
-      VueMacros({
-        defineProp: {
-          edition: 'johnsonEdition',
-        },
-        plugins: {
-          vue: Vue({
-            include: [/\.vue$/, /\.setup\.[cm]?[jt]sx?$/],
-          }),
-          // vueJsx: VueJsx(), // if needed
-        },
+      UnoCSS(),
+      legacy({
+        targets: ['defaults', 'not IE 11'],
+      }),
+      Inspector({
+        vue: 2,
+      }),
+      Pages({
+        dirs: [
+          {
+            dir: 'src/pages',
+            baseRoute: '',
+            filePattern: '**\/*.*',
+          },
+        ],
+        exclude: ['**/components/*.vue'],
+      }),
+      Layouts({
+        layoutsDirs: 'src/layouts',
+        defaultLayout: 'default',
       }),
     ],
   }
