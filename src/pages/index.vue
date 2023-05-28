@@ -31,7 +31,7 @@ function go(name: string) {
         ring-offset-3
       >
     </section>
-    <button btn bg-coolgray-400 color-white hover:bg-orange :disabled="!name" @click="go(name)">
+    <button btn bg-coolgray-400 color-white hover:bg-orange @click="go(name)">
       GO
     </button>
   </div>

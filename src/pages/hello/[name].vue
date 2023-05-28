@@ -25,7 +25,7 @@ meta:
     </section>
     <section>
       <button btn bg-coolgray-400 color-white @click="back">
-        back
+        BACK
       </button>
     </section>
   </div>
