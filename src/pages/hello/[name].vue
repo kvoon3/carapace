@@ -18,9 +18,9 @@ meta:
 <template>
   <div>
     <section>
-      <i i-carbon-home />
+      <i i-custom-hand inline-block p-10 />
     </section>
-    <section>
+    <section color-coolgray-4 dark:color-white>
       Hi, <span color-green> {{ props.name }} </span>
     </section>
     <section>

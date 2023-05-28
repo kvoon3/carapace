@@ -1,12 +1,12 @@
 <script setup lang='ts'>
-
+import { toggleDark } from '~/utils/theme'
 </script>
 
 <template>
   <div>
     <RouterView />
-    <button>
-      <a i-carbon-sun h-10 w-10 bg-red />
+    <button @click="toggleDark()">
+      <a i-carbon-sun dark="i-carbon-moon color-coolgray-500" inline-block bg-orange p-3 />
     </button>
     <div color-coolgray-300>
       [default layout]

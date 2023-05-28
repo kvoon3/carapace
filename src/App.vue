@@ -2,11 +2,8 @@
 </script>
 
 <template>
-  <div>
-    <i i-carbon-sun />
-    <div id="app" mx-auto px-10 py-20 text-center container>
-      <router-view />
-    </div>
+  <div id="app" mx-auto h-full px-10 py-20 text-center container dark:bg-dark>
+    <router-view />
   </div>
 </template>
 

@@ -11,12 +11,9 @@ function go(name: string) {
 <template>
   <div leading-loose>
     <section>
-      <img
-        mx-auto
-        src="/CarbonChartBubblePacked.svg" alt=""
-      >
+      <i i-carbon-chart-bubble-packed inline-block p-6 dark:color-white />
     </section>
-    <section text="coolgray-500 xl">
+    <section text="orange xl">
       Carapace
     </section>
     <section text="coolgray-400 md">
@@ -34,7 +31,7 @@ function go(name: string) {
         ring-offset-3
       >
     </section>
-    <button btn bg-coolgray-400 color-white hover:bg-orange-500 :disabled="!name" @click="go(name)">
+    <button btn bg-coolgray-400 color-white hover:bg-orange :disabled="!name" @click="go(name)">
       GO
     </button>
   </div>
