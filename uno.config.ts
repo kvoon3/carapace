@@ -1,16 +1,34 @@
-import transformerVariantGroup from '@unocss/transformer-variant-group'
-import { defineConfig } from 'unocss'
-import transformerDirectives from '@unocss/transformer-directives'
-import presetAttributify from '@unocss/preset-attributify'
-import presetUno from '@unocss/preset-uno'
-import presetIcons from '@unocss/preset-icons'
+import {
+  defineConfig,
+  presetAttributify,
+  presetIcons,
+  presetUno,
+  presetWebFonts,
+  transformerDirectives,
+  transformerVariantGroup,
+} from 'unocss'
 
 export default defineConfig({
   // ...
+  shortcuts: {
+    btn: 'rounded-2 m-2  px-5',
+  },
   presets: [
     presetUno(),
     presetAttributify({ /* preset options */ }),
-    presetIcons({ /* options */ }),
+    presetIcons({
+      scale: 1.2,
+      collections: {
+        carbon: () => import('@iconify-json/carbon/icons.json').then(i => i.default),
+      },
+    }),
+    presetWebFonts({
+      fonts: {
+        sans: 'DM Sans',
+        serif: 'DM Serif Display',
+        mono: 'DM Mono',
+      },
+    }),
   ],
   transformers: [
     transformerVariantGroup(),

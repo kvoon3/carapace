@@ -18,7 +18,7 @@ const pinia = createPinia()
 const vue = new Vue({
   router: Router,
   pinia,
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+
   render: h => h(App),
 })
   .$mount('#app')

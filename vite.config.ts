@@ -9,7 +9,9 @@ import legacy from '@vitejs/plugin-legacy'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 
-import Inspector from 'unplugin-vue-inspector/vite' // OR vite-plugin-vue-inspector
+import Inspector from 'vite-plugin-vue-inspector'
+
+// OR vite-plugin-vue-inspector
 
 export default defineConfig(({ command, mode }) => {
   // 根据当前工作目录中的 `mode` 加载 .env 文件
