@@ -4,11 +4,11 @@
 
 <route lang="yaml">
 meta:
-  layout: test
+  layout: home
 </route>
 
 <template>
-  <div>test page</div>
+  <div>hello index page</div>
 </template>
 
 <style scoped>

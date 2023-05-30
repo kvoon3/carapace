@@ -10,7 +10,7 @@ import {
 export default defineConfig({
   // ...
   shortcuts: {
-    btn: 'rounded-2 m-2  px-5',
+    btn: 'rounded-2 m-2 px-5 leading-loose',
   },
   presets: [
     presetUno(),
