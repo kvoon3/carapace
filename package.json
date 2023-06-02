@@ -8,7 +8,9 @@
     "dev": "vite",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "test --coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@unocss/reset": "^0.52.3",
@@ -44,6 +46,7 @@
     "vite": "^4.3.2",
     "vite-plugin-pages": "^0.30.1",
     "vite-plugin-vue-inspector": "^3.4.2",
-    "vite-plugin-vue-layouts": "^0.8.0"
+    "vite-plugin-vue-layouts": "^0.8.0",
+    "vitest": "^0.31.1"
   }
 }
