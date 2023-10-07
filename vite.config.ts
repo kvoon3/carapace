@@ -27,6 +27,16 @@ export default defineConfig(({ command, mode }) => {
         '~/': `${path.resolve(__dirname, 'src')}/`,
       },
     },
+    build: {
+      copyPublicDir: true,
+      cssTarget: 'chrome49',
+      emptyOutDir: true,
+    },
+    preview: {
+      host: '192.168.0.153',
+      port: 4000,
+      cors: true,
+    },
     plugins: [
       VueMacros({
         defineProp: {
@@ -66,7 +76,7 @@ export default defineConfig(({ command, mode }) => {
       }),
       UnoCSS(),
       legacy({
-        targets: ['defaults', 'not IE 11'],
+        targets: ['cover 99.5% in CN', 'not IE 11'],
       }),
       Inspector({
         vue: 2,

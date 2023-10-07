@@ -1,8 +1,7 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import { PiniaVuePlugin, createPinia } from 'pinia'
+import consola from 'consola'
 import App from './App.vue'
-import { Router } from '~/router/index'
+import type { UserModule } from './types'
 
 import '@unocss/reset/normalize.css'
 import '@unocss/reset/tailwind.css'
@@ -10,15 +9,19 @@ import 'virtual:uno.css'
 
 Vue.config.productionTip = false
 
-Vue.use(VueRouter)
-Vue.use(PiniaVuePlugin)
+const vueOptions = Object.values(import.meta.glob<{ install: UserModule }>(['./modules/*.ts', './modules/*.js'], { eager: true }))
+  .map(i => i.install?.({
+    Vue,
+  }))
+  .reduce((accu, cur) => ({
+    ...accu,
+    ...cur,
+  }), {/* default vue options */})
 
-const pinia = createPinia()
+consola.info('vueOptions', vueOptions)
 
 const vue = new Vue({
-  router: Router,
-  pinia,
-
+  ...vueOptions,
   render: h => h(App),
 })
   .$mount('#app')
