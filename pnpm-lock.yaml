@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@ls-lint/ls-lint':
+    specifier: ^2.1.0
+    version: 2.1.0
   '@unocss/reset':
     specifier: ^0.52.3
     version: registry.npmmirror.com/@unocss/reset@0.52.3
@@ -284,6 +287,13 @@ packages:
     os: [win32]
     requiresBuild: true
     optional: true
+
+  /@ls-lint/ls-lint@2.1.0:
+    resolution: {integrity: sha512-WvyZf2TKUstZYVetDFbQF1kp5Wd2AJX50nqsmewwrHpEcLVCU8RDoqfBBnYHoaBxTRZcWjfNnnuLCBofkH5nEA==}
+    cpu: [x64, arm64, s390x]
+    os: [darwin, linux, win32]
+    hasBin: true
+    dev: false
 
   /fsevents@2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}

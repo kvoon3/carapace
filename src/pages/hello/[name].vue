@@ -1,3 +1,8 @@
+<route lang="yaml">
+meta:
+  layout: home
+</route>
+
 <script setup lang='ts'>
 const props = defineProps<{
   name: string
@@ -10,11 +15,6 @@ function back() {
 }
 </script>
 
-<route lang="yaml">
-meta:
-  layout: home
-</route>
-
 <template>
   <div>
     <section>
@@ -26,6 +26,9 @@ meta:
     <section>
       <button btn bg-coolgray-400 color-white @click="back">
         BACK
+      </button>
+      <button btn bg-coolgray-400 color-white @click="() => router.push('/video-test')">
+        VIDEO
       </button>
     </section>
   </div>
