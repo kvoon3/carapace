@@ -23,9 +23,13 @@ export default defineConfig(({ command, mode }) => {
       __APP_ENV__: env.APP_ENV,
     },
     resolve: {
-      alias: {
-        '~/': `${path.resolve(__dirname, 'src')}/`,
-      },
+      // alias: {
+      //   '~/': `${path.resolve(__dirname, 'src')}/`,
+      // },
+      alias: [
+        { find: '~/', replacement: `${path.resolve(__dirname, 'src')}/` },
+        { find: /^~@vant\/icons\/src\/encode-woff2.less/, replacement: path.resolve(__dirname, 'src/vant-compat/encode-woff2.less') },
+      ],
     },
     build: {
       copyPublicDir: true,
@@ -36,6 +40,18 @@ export default defineConfig(({ command, mode }) => {
       host: '192.168.0.153',
       port: 4000,
       cors: true,
+    },
+    css: {
+      preprocessorOptions: {
+        less: {
+          async: false,
+          env: 'development',
+          javascriptEnabled: true,
+          modifyVars: {
+            'button-primary-background-color': '#ddd',
+          },
+        },
+      },
     },
     plugins: [
       VueMacros({
