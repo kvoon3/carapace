@@ -27,8 +27,8 @@ function go(name: string) {
         v-model="name"
         type="text"
         placeholder="What's your name?"
-        border="~ 3" rounded-2 text-center
-        ring-offset-3
+        border="~ 2"
+        rounded-2 bg-slate-1 text-center ring-offset-3 dark:bg-dark
       >
     </section>
     <button btn bg-coolgray-400 color-white hover:bg-orange @click="go(name)">

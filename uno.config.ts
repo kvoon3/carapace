@@ -11,7 +11,8 @@ import {
 export default defineConfig({
   // ...
   shortcuts: {
-    btn: 'rounded-2 m-2 px-5 leading-loose',
+    'bg-base': 'bg-white dark:bg-black',
+    'btn': 'rounded-2 m-2 px-5 leading-loose',
   },
   presets: [
     presetUno(),

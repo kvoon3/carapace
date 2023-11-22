@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div id="app" mx-auto h-full px-10 py-20 text-center dark:bg-dark>
+  <div id="app" bg-base mx-auto h-full px-10 py-20 text-center>
     <router-view />
   </div>
 </template>
