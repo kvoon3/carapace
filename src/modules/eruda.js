@@ -13,4 +13,5 @@ const { load } = useScriptTag(
   { manual: true },
 )
 
-load()
+if (import.meta.env.DEV)
+  load()
