@@ -57,7 +57,6 @@ export default defineConfig(({ command, mode }) => {
         ],
         imports: [
           'vue',
-          'vue-router',
           'vue-router/composables',
           {
             from: 'vue-router',
@@ -82,6 +81,7 @@ export default defineConfig(({ command, mode }) => {
         vue: 2,
       }),
       Pages({
+        routeBlockLang: 'yaml',
         dirs: [
           {
             dir: 'src/pages',
