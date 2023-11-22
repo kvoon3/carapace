@@ -1,19 +1,15 @@
+<route lang="yaml">
+meta:
+  layout: home
+</route>
+
 <script setup lang='ts'>
 const props = defineProps<{
   name: string
 }>()
 
 const router = useRouter()
-
-function back() {
-  router.back()
-}
 </script>
-
-<route lang="yaml">
-meta:
-  layout: home
-</route>
 
 <template>
   <div>
@@ -24,7 +20,7 @@ meta:
       Hi, <span color-green> {{ props.name }} </span>
     </section>
     <section>
-      <button btn bg-coolgray-400 color-white @click="back">
+      <button btn bg-coolgray-400 color-white @click="() => router.back()">
         BACK
       </button>
     </section>
