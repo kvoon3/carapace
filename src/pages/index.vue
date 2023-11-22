@@ -28,7 +28,7 @@ function go(name: string) {
         type="text"
         placeholder="What's your name?"
         border="~ 2"
-        rounded-2 bg-slate-1 text-center ring-offset-3 dark:bg-dark
+        rounded-2 bg-slate-1 text-center ring-offset-3 dark="bg-dark color-white"
       >
     </section>
     <button btn bg-coolgray-400 color-white hover:bg-orange @click="go(name)">
