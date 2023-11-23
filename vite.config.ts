@@ -64,6 +64,11 @@ export default defineConfig(({ command, mode }) => {
             imports: ['RouteLocationRaw'],
             type: true,
           },
+          {
+            consola: [
+              'consola',
+            ],
+          },
         ],
         eslintrc: {
           enabled: true,
