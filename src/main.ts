@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import consola from 'consola'
 import App from './App.vue'
 import type { UserModule } from './types'
 
