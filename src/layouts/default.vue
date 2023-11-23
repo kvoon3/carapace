@@ -5,9 +5,12 @@ import { toggleDark } from '~/utils/theme'
 <template>
   <div>
     <RouterView />
-    <button @click="toggleDark()">
-      <a i-carbon-sun dark="i-carbon-moon color-coolgray-500" inline-block bg-orange p-3 />
-    </button>
+    <div flex items-center justify-center space-x-2>
+      <button i-carbon-sun dark="i-carbon-moon color-coolgray-500" bg-orange @click="toggleDark()" />
+      <a flex items-center href="https://github.com/kwongliegaai/carapace">
+        <button i-carbon-logo-github color-coolgray-500 dark:color-coolgray-500 />
+      </a>
+    </div>
     <div color-coolgray-300>
       [default layout]
     </div>
