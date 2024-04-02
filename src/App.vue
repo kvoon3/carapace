@@ -1,12 +1,5 @@
-<script setup lang='ts'>
-</script>
-
 <template>
-  <div id="app" bg-base mx-auto h-full px-10 py-20 text-center>
+  <div id="app" mx-auto h-100dvh h-screen px-10 py-20 text-center bg-base>
     <router-view />
   </div>
 </template>
-
-<style scoped>
-
-</style>

@@ -8,10 +8,10 @@ import UnoCSS from 'unocss/vite'
 import legacy from '@vitejs/plugin-legacy'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
-
 import Inspector from 'vite-plugin-vue-inspector'
-
-// OR vite-plugin-vue-inspector
+import Compression from 'unplugin-compression/vite'
+import { name } from './package.json'
+import DirCreator from './plugins/dirCreator'
 
 export default defineConfig(({ command, mode }) => {
   // 根据当前工作目录中的 `mode` 加载 .env 文件
@@ -100,6 +100,24 @@ export default defineConfig(({ command, mode }) => {
       Layouts({
         layoutsDirs: 'src/layouts',
         defaultLayout: 'default',
+      }),
+      DirCreator({
+        dirs: ['./pkg'],
+      }),
+      Compression({
+        adapter: 'zip',
+        source: 'dist',
+        outDir: './pkg',
+        formatter(source) {
+          const genCompactFullDateString = (date: Date): string => {
+            return [
+              date.getFullYear(),
+              ...[date.getMonth() + 1, date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds()]
+                .map(i => i.toString().padStart(2, '0')),
+            ].join('')
+          }
+          return `${name}.${genCompactFullDateString(new Date())}.${source.adapter}`
+        },
       }),
     ],
   }

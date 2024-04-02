@@ -13,7 +13,6 @@
     "RouteLocationRaw": true,
     "VNode": true,
     "WritableComputedRef": true,
-    "axios": true,
     "computed": true,
     "consola": true,
     "createApp": true,

@@ -6,7 +6,6 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
-  const axios: typeof import('axios')['default']
   const computed: typeof import('vue')['computed']
   const consola: typeof import('consola')['consola']
   const createApp: typeof import('vue')['createApp']

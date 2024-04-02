@@ -16,7 +16,3 @@ import { toggleDark } from '~/utils/theme'
     </div>
   </div>
 </template>
-
-<style scoped>
-
-</style>
