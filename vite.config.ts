@@ -1,4 +1,5 @@
 import path from 'node:path'
+import process from 'node:process'
 import { defineConfig, loadEnv } from 'vite'
 import Vue from '@vitejs/plugin-vue2'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -10,10 +11,11 @@ import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Inspector from 'vite-plugin-vue-inspector'
 import Compression from 'unplugin-compression/vite'
+import webfontDownload from 'vite-plugin-webfont-dl'
 import { name } from './package.json'
 import DirCreator from './plugins/dirCreator'
 
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(({ mode }) => {
   // 根据当前工作目录中的 `mode` 加载 .env 文件
   // 设置第三个参数为 '' 来加载所有环境变量，而不管是否有 `VITE_` 前缀。
   const env = loadEnv(mode, process.cwd(), '')
@@ -119,6 +121,7 @@ export default defineConfig(({ command, mode }) => {
           return `${name}.${genCompactFullDateString(new Date())}.${source.adapter}`
         },
       }),
+      webfontDownload(),
     ],
   }
 })

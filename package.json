@@ -52,6 +52,7 @@
     "vite-plugin-pages": "^0.30.1",
     "vite-plugin-vue-inspector": "^3.7.2",
     "vite-plugin-vue-layouts": "^0.8.0",
+    "vite-plugin-webfont-dl": "^3.9.2",
     "vitest": "^0.31.4"
   },
   "simple-git-hooks": {
