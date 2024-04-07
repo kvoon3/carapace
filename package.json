@@ -8,6 +8,7 @@
     "dev": "vite --host --port 8080",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "lint:inspect": "nlx @eslint/config-inspector",
     "preview": "vite preview",
     "test": "vitest",
     "test --coverage": "vitest run --coverage"
