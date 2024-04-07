@@ -15,7 +15,7 @@ export default defineConfig({
     // regex starts and ends with '/'
     'vue': 'minor',
     'vue-router': 'minor',
-    'eslint': '^8.54.0',
+    'eslint': 'lastest',
     '@antfu/eslint-config': 'latest',
     'eslint': 'latest',
     'eslint-plugin-vue': 'latest',
