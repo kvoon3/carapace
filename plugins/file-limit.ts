@@ -9,7 +9,7 @@ export interface LimitFileOptions {
 
 export default function LimitFile(options: LimitFileOptions) {
   return {
-    name: 'rollup-plugin-file-limit',
+    name: 'rollup-plugin-limit-file',
     buildEnd: async () => {
       const { path, limit, customFilter } = options
       const fileNames = await readdir(resolve(path))
