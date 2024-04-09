@@ -72,9 +72,7 @@ export default defineConfig(({ mode }) => {
             ],
           },
         ],
-        eslintrc: {
-          enabled: true,
-        },
+        dts: 'src/auto-imports.d.ts',
       }),
       Components({
         extensions: ['vue'],
