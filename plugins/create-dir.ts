@@ -1,8 +1,8 @@
 import fs from 'node:fs'
 
-export default function DirCreator(options: { dirs: string[] }) {
+export default function CreateDir(options: { dirs: string[] }) {
   return {
-    name: 'rollup-plugin-dir-creator',
+    name: 'rollup-plugin-create-dir',
     buildStart() {
       const { dirs } = options
       dirs.forEach((dir) => {

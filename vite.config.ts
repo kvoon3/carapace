@@ -13,7 +13,9 @@ import Inspector from 'vite-plugin-vue-inspector'
 import Compression from 'unplugin-compression/vite'
 import webfontDownload from 'vite-plugin-webfont-dl'
 import { name } from './package.json'
-import DirCreator from './plugins/dirCreator'
+import CreateDir from './plugins/create-dir'
+import LimitFile from './plugins/file-limit'
+import { TimeUnit, genCompactFullDate, isTimeAgo, parseCompactFullDate } from './src/utils/time'
 
 export default defineConfig(({ mode }) => {
   // 根据当前工作目录中的 `mode` 加载 .env 文件
@@ -101,7 +103,7 @@ export default defineConfig(({ mode }) => {
         layoutsDirs: 'src/layouts',
         defaultLayout: 'default',
       }),
-      DirCreator({
+      CreateDir({
         dirs: ['./pkg'],
       }),
       Compression({
@@ -109,14 +111,16 @@ export default defineConfig(({ mode }) => {
         source: 'dist',
         outDir: './pkg',
         formatter(source) {
-          const genCompactFullDateString = (date: Date): string => {
-            return [
-              date.getFullYear(),
-              ...[date.getMonth() + 1, date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds()]
-                .map(i => i.toString().padStart(2, '0')),
-            ].join('')
-          }
-          return `${name}.${genCompactFullDateString(new Date())}.${source.adapter}`
+          return `${name}.${genCompactFullDate(new Date())}.${source.adapter}`
+        },
+      }),
+      LimitFile({
+        path: './pkg',
+        limit: 20,
+        customFilter(fileName) {
+          const [_, date, __] = fileName.split('.')
+          const createTime = parseCompactFullDate(date)
+          return isTimeAgo(createTime, { unit: TimeUnit.MONTH, times: 4 })
         },
       }),
       webfontDownload(),
