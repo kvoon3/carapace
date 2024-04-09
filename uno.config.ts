@@ -12,7 +12,8 @@ export default defineConfig({
   // ...
   shortcuts: {
     'bg-base': 'bg-white dark:bg-black',
-    'btn': 'rounded-2 m-2 px-5 leading-loose',
+    'text-base': 'text-gray-800 dark:text-white',
+    'btn': 'm-2 px-4 leading-loose opacity-100 hover:opacity-80',
   },
   presets: [
     presetUno(),

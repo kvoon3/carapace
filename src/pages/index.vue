@@ -9,34 +9,33 @@ function go(name: string) {
 </script>
 
 <template>
-  <div leading-loose>
+  <div leading-loose space-y-6>
     <section>
-      <i i-carbon-chart-bubble-packed inline-block p-6 dark:color-white />
-    </section>
-    <section text="orange xl">
-      Carapace
-    </section>
-    <section text="coolgray-400 md">
-      start template for
-      <span color="green">
-        vue2.7
-      </span>
+      <div>
+        <i i-carbon-chart-bubble-packed inline-block size-12 dark:color-white />
+      </div>
+      <div text="orange xl">
+        Carapace
+      </div>
+      <div text="coolgray-400" font-italic>
+        Start Template For
+        <span color="green">
+          Vue 2.7
+        </span>
+      </div>
     </section>
     <section>
       <input
         v-model="name"
         type="text"
         placeholder="What's your name?"
-        border="~ 2"
-        rounded-2 bg-slate-1 text-center ring-offset-3 dark="bg-dark color-white"
+        rounded-2 bg-slate-1 text-center dark:bg-dark
+        outline="none active:none"
+        @keydown.enter="go(name)"
       >
     </section>
-    <button btn bg-coolgray-400 color-white hover:bg-orange @click="go(name)">
+    <button :disabled="!name" rounded-full btn color-white bg-orange @click="go(name)">
       GO
     </button>
   </div>
 </template>
-
-<style scoped>
-
-</style>

@@ -8,9 +8,9 @@ const router = useRouter()
 </script>
 
 <template>
-  <div>
-    <div>hello index page</div>
-    <button btn bg-coolgray-400 color-white @click="() => router.back()">
+  <div space-y-6>
+    <div>Hello Index Page</div>
+    <button btn bg-orange rounded-full @click="() => router.back()">
       BACK
     </button>
   </div>
