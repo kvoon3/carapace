@@ -35,8 +35,6 @@ export default defineConfig(({ mode }) => {
       emptyOutDir: true,
     },
     preview: {
-      host: '192.168.0.153',
-      port: 4000,
       cors: true,
     },
     plugins: [

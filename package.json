@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:inspect": "nlx @eslint/config-inspector",
-    "preview": "vite preview",
+    "preview": "vite preview --host",
     "test": "vitest",
     "test --coverage": "vitest run --coverage"
   },
