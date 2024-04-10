@@ -13,8 +13,10 @@ export default defineConfig({
   // ...
   shortcuts: {
     'bg-base': 'bg-white dark:bg-black',
+    'bg-base-2': 'bg-neutral-1 dark:bg-dark',
     'text-base': 'text-gray-800 dark:text-white',
     'btn': 'm-2 px-4 leading-loose opacity-100 hover:opacity-70',
+    'position-center': 'left-50% top-50% translate--50%',
   },
   presets: [
     presetUno(),
