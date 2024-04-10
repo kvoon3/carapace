@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
+import { router } from './router'
+
 import type { UserModule } from './types'
 
 import '@unocss/reset/normalize.css'
 import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
-import { Router } from './router'
 
 Vue.config.productionTip = false
 
@@ -13,7 +14,7 @@ const vueOptions = Object.values(import.meta.glob<{ install: UserModule }>(['./m
   // provide context for install module
   .map(i => i.install?.({
     Vue,
-    router: Router,
+    router,
   }))
   // merge vue options
   .reduce((accu, cur) => ({

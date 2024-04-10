@@ -4,7 +4,7 @@ import generatedRoutes from 'virtual:generated-pages'
 
 const routes = setupLayouts(generatedRoutes)
 
-export const Router = new VueRouter({
+export const router = new VueRouter({
   mode: 'hash',
   routes,
 })
