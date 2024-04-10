@@ -22,6 +22,7 @@ const router = useRouter()
         Here was a dynamic route
       </div>
     </section>
+    <TheCounter />
     <section>
       <button rounded-full btn bg-coolgray-400 color-white bg-orange @click="() => router.back()">
         BACK
