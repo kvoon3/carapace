@@ -14,8 +14,8 @@ const router = useRouter()
 <template>
   <div space-y-6>
     <section>
-      <i i-custom-hand inline-block size-14 />
-      <div>
+      <i i-custom-hand inline-block size-12 />
+      <div text-xl>
         Hi, <span color-green> {{ props.name }} </span>
       </div>
       <div font-italic>

@@ -12,7 +12,7 @@ function go(name: string) {
   <div leading-loose space-y-6>
     <section>
       <div>
-        <i i-carbon-chart-bubble-packed inline-block size-12 dark:color-white />
+        <i i-carbon-chart-bubble-packed inline-block size-12 />
       </div>
       <div text="orange xl">
         Carapace
