@@ -23,11 +23,9 @@ const router = useRouter()
       </div>
     </section>
     <TheCounter />
-    <section>
-      <button rounded-full btn bg-coolgray-400 color-white bg-orange @click="() => router.back()">
-        BACK
-      </button>
-    </section>
+    <button rounded-full btn bg-coolgray-400 color-white bg-orange @click="() => router.back()">
+      BACK
+    </button>
   </div>
 </template>
 
