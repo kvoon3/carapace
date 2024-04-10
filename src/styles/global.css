@@ -1,5 +1,15 @@
-html, body{
-  @apply h-screen w-screen of-hidden
+@import './markdown.css';
+
+html, body, #app{
+  @apply h-100% of-x-hidden
+}
+
+html * {
+  scrollbar-color: #ddd #eee;
+}
+
+html.dark * {
+  scrollbar-color: #444 #222;
 }
 
 .noto-sans-sc {

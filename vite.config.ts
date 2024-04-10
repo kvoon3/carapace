@@ -12,6 +12,9 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Inspector from 'vite-plugin-vue-inspector'
 import Compression from 'unplugin-compression/vite'
 import webfontDownload from 'vite-plugin-webfont-dl'
+import Markdown from 'unplugin-vue-markdown/vite'
+import Shiki from '@shikijs/markdown-it'
+import anchor from 'markdown-it-anchor'
 import { name } from './package.json'
 import CreateDir from './plugins/create-dir'
 import LimitFile from './plugins/file-limit'
@@ -46,7 +49,7 @@ export default defineConfig(({ mode }) => {
         },
         plugins: {
           vue: Vue({
-            include: [/\.vue$/, /\.setup\.[cm]?[jt]sx?$/],
+            include: [/\.vue$/, /\.setup\.[cm]?[jt]sx?$/, /\.md$/],
           }),
           // vueJsx: VueJsx(), // if needed
         },
@@ -74,17 +77,9 @@ export default defineConfig(({ mode }) => {
         ],
         dts: 'src/auto-imports.d.ts',
       }),
-      Components({
-        extensions: ['vue'],
-        include: [/\.vue$/, /\.vue\?vue/],
-        dts: 'src/components.d.ts',
-      }),
-      UnoCSS(),
-      legacy({
-        targets: ['cover 99.5% in CN', 'not IE 11'],
-      }),
-      Inspector({
-        vue: 2,
+      Layouts({
+        layoutsDirs: 'src/layouts',
+        defaultLayout: 'default',
       }),
       Pages({
         routeBlockLang: 'yaml',
@@ -95,12 +90,41 @@ export default defineConfig(({ mode }) => {
             filePattern: '**\/*.*',
           },
         ],
+        extensions: ['vue', 'md'],
         exclude: ['**/components/*.vue'],
       }),
-      Layouts({
-        layoutsDirs: 'src/layouts',
-        defaultLayout: 'default',
+      Markdown({
+        wrapperClasses: 'prose m-auto text-left',
+        async markdownItSetup(md) {
+          md.use(await Shiki({
+            themes: {
+              light: 'vitesse-light',
+              dark: 'vitesse-black',
+            },
+          }))
+          md.use(anchor, {
+            permalink: anchor.permalink.linkInsideHeader({
+              symbol: '#',
+              ariaHidden: true,
+              placement: 'before',
+            }),
+          })
+        },
       }),
+      // `Components` should be after `Markdown`
+      Components({
+        extensions: ['vue', 'md'],
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+        dts: 'src/components.d.ts',
+      }),
+      UnoCSS(),
+      legacy({
+        targets: ['cover 99.5% in CN', 'not IE 11'],
+      }),
+      Inspector({
+        vue: 2,
+      }),
+      webfontDownload(),
       CreateDir({
         dirs: ['./pkg'],
       }),
@@ -121,7 +145,6 @@ export default defineConfig(({ mode }) => {
           return isTimeAgo(createTime, { unit: TimeUnit.MONTH, times: 4 })
         },
       }),
-      webfontDownload(),
     ],
   }
 })

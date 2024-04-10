@@ -2,6 +2,7 @@ import {
   defineConfig,
   presetAttributify,
   presetIcons,
+  presetTypography,
   presetUno,
   presetWebFonts,
   transformerDirectives,
@@ -13,7 +14,7 @@ export default defineConfig({
   shortcuts: {
     'bg-base': 'bg-white dark:bg-black',
     'text-base': 'text-gray-800 dark:text-white',
-    'btn': 'm-2 px-4 leading-loose opacity-100 hover:opacity-80',
+    'btn': 'm-2 px-4 leading-loose opacity-100 hover:opacity-70',
   },
   presets: [
     presetUno(),
@@ -32,6 +33,17 @@ export default defineConfig({
         sans: 'DM Sans',
         serif: 'DM Serif Display',
         mono: 'DM Mono',
+      },
+    }),
+    presetTypography({
+      cssExtend:
+      {
+        'h1,h2,h3,h4,h5,h6': {
+          color: 'orange',
+        },
+        'blockquote': {
+          color: '#bbb',
+        },
       },
     }),
   ],

@@ -18,7 +18,7 @@ const router = useRouter()
       <div text-xl>
         Hi, <span color-green> {{ props.name }} </span>
       </div>
-      <div font-italic>
+      <div font-italic text-coolgray-400>
         Here was a dynamic route
       </div>
     </section>

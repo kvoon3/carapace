@@ -1,11 +1,11 @@
 <template>
-  <div space-y-6>
+  <main px-10 py-20>
     <RouterView />
-    <section space-y-2>
+    <section mt6>
       <TheFooter />
-      <div color-coolgray-300 dark:color-coolGray-500 text-sm>
+      <div mt4 color-coolgray-300 dark:color-coolGray-500 text-sm>
         [default layout]
       </div>
     </section>
-  </div>
+  </main>
 </template>
