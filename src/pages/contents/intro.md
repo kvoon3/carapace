@@ -19,7 +19,7 @@ console.log('hello', world)
 
 You can also use vue component in markdown page:
 
-<ModalBtn classes="bg-orange rounded-full" title="Modal" text="Open a Modal">
+<ModalBtn classes="bg-orange rounded-full text-white" title="Modal" text="Open a Modal">
   <template>
   <p>
     Hi! You opened me, and you can close me now.
