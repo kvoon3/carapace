@@ -17,9 +17,9 @@ export default defineConfig({
     'vue-router': 'minor',
     'eslint': 'lastest',
     '@antfu/eslint-config': 'latest',
-    'eslint': 'latest',
     'eslint-plugin-vue': 'latest',
     'vite': 'latest',
     '/unocss/': 'latest',
+    'portal-vue': 'minor',
   },
 })
