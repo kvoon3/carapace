@@ -1,9 +1,9 @@
 import type { ComponentOptions } from 'vue'
-import type { VueConstructor } from 'vue/types/vue'
 import type VueRouter from 'vue-router'
+import type Vue from 'vue'
 
 export interface UserContext {
-  Vue: VueConstructor
+  Vue: typeof Vue
   router: VueRouter
 }
 
