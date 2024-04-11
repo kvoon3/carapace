@@ -7,8 +7,8 @@ const { load } = useScriptTag(
   () => {
     window.eruda.init()
     window.eruda
-      .get('console')
-      .config.set('displayExtraInfo', true)
+      ?.get('console')
+      ?.config.set('displayExtraInfo', true)
   },
   { manual: true },
 )
