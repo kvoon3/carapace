@@ -10,7 +10,6 @@ declare module 'vue' {
     ModalBtn: typeof import('./components/ModalBtn.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    TestComponent: typeof import('./components/testComponent.vue')['default']
     TheCounter: typeof import('./components/TheCounter.vue')['default']
     TheFooter: typeof import('./components/TheFooter.vue')['default']
     TheModal: typeof import('./components/TheModal.vue')['default']

@@ -13,5 +13,5 @@ const { load } = useScriptTag(
   { manual: true },
 )
 
-if (import.meta.env.DEV)
+if (import.meta.env.MODE === 'mobile-debug')
   load()

@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "build": "vite build",
+    "build:mb": "vite build --mode mobile-debug",
     "dev": "vite --host --port 8080",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
