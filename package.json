@@ -11,9 +11,11 @@
     "lint:fix": "eslint . --fix",
     "lint:inspect": "nlx @eslint/config-inspector",
     "preview": "vite preview --host",
+    "preview-https": "serve dist",
     "test": "vitest",
     "test --coverage": "vitest run --coverage",
-    "prepare": "simple-git-hooks"
+    "up": "taze major -I",
+    "postinstall": "nlx simple-git-hooks"
   },
   "dependencies": {
     "@unocss/reset": "^0.59.0",
@@ -47,6 +49,7 @@
     "eslint-plugin-format": "^0.1.0",
     "eslint-plugin-markdown": "^4.0.1",
     "eslint-plugin-vue": "^9.24.0",
+    "https-localhost": "^4.7.1",
     "lint-staged": "^15.2.2",
     "nprogress": "^0.2.0",
     "portal-vue": "^2.1.7",
