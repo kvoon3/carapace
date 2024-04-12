@@ -1,0 +1,16 @@
+ls:
+  src/components:
+    .vue: PascalCase | regex:index
+    .dir: PascalCase | lowercase # TODO: lowercase should only apply to `src/components` dir
+  src/pages:
+    .md: snake_case | regex:index
+    .vue: kebab-case | regex:index | regex:\[.*?\]
+    .dir: kebab-case
+
+ignore:
+  - node_modules
+  - dist
+  - pkg
+  - public
+  - .git
+  - .gitignore
