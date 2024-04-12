@@ -1,13 +1,13 @@
 import { setupLayouts } from 'virtual:generated-layouts'
 import generatedRoutes from 'virtual:generated-pages'
 import App from './App.vue'
+import { setup } from './setup'
 
 import type { UserModule } from './types'
 
 import '@unocss/reset/normalize.css'
 import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
-import { setup } from './setup'
 
 setup(
   App,
