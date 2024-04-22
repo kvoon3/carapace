@@ -1,7 +1,7 @@
 import Vue, { type Component } from 'vue'
 import VueRouter from 'vue-router'
 import type { RouterOptions } from 'vue-router'
-import type { UserModule } from './types'
+import type { UserModule } from '~/types'
 
 interface SetupOptions {
   rootContainer?: string

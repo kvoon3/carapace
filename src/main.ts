@@ -1,7 +1,7 @@
 import { setupLayouts } from 'virtual:generated-layouts'
 import generatedRoutes from 'virtual:generated-pages'
 import App from './App.vue'
-import { setup } from './setup'
+import { setup } from './logics/helpers/setup'
 
 import type { UserModule } from './types'
 
