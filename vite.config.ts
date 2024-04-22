@@ -18,8 +18,8 @@ import anchor from 'markdown-it-anchor'
 import { name } from './package.json'
 import CreateDir from './plugins/create-dir'
 import LimitFile from './plugins/file-limit'
-import { TimeUnit, genCompactFullDate, isTimeAgo, parseCompactFullDate } from './src/utils/time'
-import { moveMatchToEnd } from './src/utils/array'
+import { TimeUnit, genCompactFullDate, isTimeAgo, parseCompactFullDate } from './src/logics/utils/time'
+import { moveMatchToEnd } from './src/logics/utils/array'
 
 export default defineConfig(({ mode }) => {
   // 根据当前工作目录中的 `mode` 加载 .env 文件
