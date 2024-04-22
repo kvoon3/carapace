@@ -1,7 +1,7 @@
 // @ts-check
 
 import { useScriptTag } from '@vueuse/core'
-import { isMobile } from '~/logics/state'
+import { isMobile } from '~/logics/states'
 
 const { load } = useScriptTag(
   'https://cdn.bootcdn.net/ajax/libs/eruda/3.0.0/eruda.min.js',
