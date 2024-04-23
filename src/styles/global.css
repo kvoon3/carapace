@@ -1,7 +1,9 @@
-@import './markdown.css';
+@import "./markdown.css";
 
-html, body, #app{
-  @apply h-100% of-x-hidden
+html,
+body,
+#app {
+  @apply h-100% of-x-hidden;
 }
 
 html * {
@@ -10,14 +12,6 @@ html * {
 
 html.dark * {
   scrollbar-color: #444 #222;
-}
-
-.noto-sans-sc {
-  font-family: "Noto Sans", "Noto Sans SC", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-variation-settings: "wdth" 100;
-  font-style: normal;
 }
 
 #nprogress {
