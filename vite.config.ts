@@ -22,11 +22,9 @@ import { TimeUnit, genCompactFullDate, isTimeAgo, parseCompactFullDate } from '.
 import { moveMatchToEnd } from './src/logics/utils/array'
 
 export default defineConfig(({ mode }) => {
-  // 根据当前工作目录中的 `mode` 加载 .env 文件
-  // 设置第三个参数为 '' 来加载所有环境变量，而不管是否有 `VITE_` 前缀。
+  // load env variables according to mode
   const env = loadEnv(mode, process.cwd(), '')
   return {
-    // vite 配置
     define: {
       __APP_ENV__: env.APP_ENV,
     },
@@ -44,6 +42,9 @@ export default defineConfig(({ mode }) => {
       cors: true,
     },
     plugins: [
+      /**
+       * https://github.com/vue-macros/vue-macros
+       */
       VueMacros({
         defineProp: {
           edition: 'johnsonEdition',
@@ -55,6 +56,10 @@ export default defineConfig(({ mode }) => {
           // vueJsx: VueJsx(), // if needed
         },
       }),
+
+      /**
+       * https://github.com/unplugin/unplugin-auto-import
+       */
       AutoImport({
         // targets to transform
         include: [
@@ -78,10 +83,18 @@ export default defineConfig(({ mode }) => {
         ],
         dts: 'src/auto-imports.d.ts',
       }),
+
+      /**
+       * https://github.com/antfu/vite-plugin-components
+       */
       Layouts({
         layoutsDirs: 'src/layouts',
         defaultLayout: 'default',
       }),
+
+      /**
+       * https://github.com/hannoeru/vite-plugin-pages
+       */
       Pages({
         routeBlockLang: 'yaml',
         dirs: [
@@ -98,6 +111,10 @@ export default defineConfig(({ mode }) => {
           return routes
         },
       }),
+
+      /**
+       * https://github.com/unplugin/unplugin-vue-markdown
+       */
       Markdown({
         wrapperClasses: 'prose m-auto text-left',
         async markdownItSetup(md) {
@@ -116,23 +133,51 @@ export default defineConfig(({ mode }) => {
           })
         },
       }),
-      // `Components` should be after `Markdown`
+
+      /**
+       * `Components` should be after `Markdown`
+       * https://github.com/unplugin/unplugin-vue-components
+       */
       Components({
         extensions: ['vue', 'md'],
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         dts: 'src/components.d.ts',
       }),
+
+      /**
+       * https://github.com/unocss/unocss
+       */
       UnoCSS(),
+
+      /**
+       * https://github.com/vitejs/vite/tree/main/packages/plugin-legacy
+       */
       legacy({
         targets: ['cover 99.5% in CN', 'not IE 11'],
       }),
+
+      /**
+       * https://github.com/webfansplz/vite-plugin-vue-inspector
+       */
       Inspector({
         vue: 2,
       }),
+
+      /**
+       * https://github.com/feat-agency/vite-plugin-webfont-dl
+       */
       webfontDownload(),
+
+      /**
+       * plugins/create-dir.ts
+       */
       CreateDir({
         dirs: ['./pkg'],
       }),
+
+      /**
+       * https://github.com/KeJunMao/unplugin-compression
+       */
       Compression({
         adapter: 'zip',
         source: 'dist',
@@ -141,6 +186,10 @@ export default defineConfig(({ mode }) => {
           return `${name}.${genCompactFullDate(new Date())}.${source.adapter}`
         },
       }),
+
+      /**
+       * plugins/limit-file.ts
+       */
       LimitFile({
         path: './pkg',
         limit: 20,
