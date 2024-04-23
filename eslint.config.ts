@@ -4,6 +4,9 @@ import markdown from 'eslint-plugin-markdown'
 
 export default antfu(
   {
+    vue: {
+      vueVersion: 2,
+    },
     unocss: true,
     formatters: true,
   },
