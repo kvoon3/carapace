@@ -19,7 +19,7 @@ import { name } from './package.json'
 import CreateDir from './plugins/create-dir'
 import LimitFile from './plugins/file-limit'
 import { TimeUnit, genCompactFullDate, isTimeAgo, parseCompactFullDate } from './src/logics/utils/time'
-import { moveMatchToEnd } from './src/logics/utils/array'
+import { sortToLast } from './src/logics/utils/array'
 
 export default defineConfig(({ mode }) => {
   // load env variables according to mode
@@ -107,7 +107,7 @@ export default defineConfig(({ mode }) => {
         extensions: ['vue', 'md'],
         exclude: ['**/components/*.vue'],
         onRoutesGenerated: (routes) => {
-          moveMatchToEnd(routes, route => route.path === '/:all(.*)*')
+          sortToLast(routes, route => route.path === '/:all(.*)*')
           return routes
         },
       }),
