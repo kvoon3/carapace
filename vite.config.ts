@@ -11,10 +11,10 @@ import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Inspector from 'vite-plugin-vue-inspector'
 import Compression from 'unplugin-compression/vite'
-import webfontDownload from 'vite-plugin-webfont-dl'
+import WebfontDownload from 'vite-plugin-webfont-dl'
 import Markdown from 'unplugin-vue-markdown/vite'
 import Shiki from '@shikijs/markdown-it'
-import anchor from 'markdown-it-anchor'
+import Anchor from 'markdown-it-anchor'
 import { name } from './package.json'
 import CreateDir from './plugins/create-dir'
 import LimitFile from './plugins/file-limit'
@@ -124,8 +124,8 @@ export default defineConfig(({ mode }) => {
               dark: 'vitesse-black',
             },
           }))
-          md.use(anchor, {
-            permalink: anchor.permalink.linkInsideHeader({
+          md.use(Anchor, {
+            permalink: Anchor.permalink.linkInsideHeader({
               symbol: '#',
               ariaHidden: true,
               placement: 'before',
@@ -166,7 +166,7 @@ export default defineConfig(({ mode }) => {
       /**
        * https://github.com/feat-agency/vite-plugin-webfont-dl
        */
-      webfontDownload(),
+      WebfontDownload(),
 
       /**
        * plugins/create-dir.ts
