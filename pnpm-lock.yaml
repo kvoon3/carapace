@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@antfu/utils':
+        specifier: ^0.7.7
+        version: 0.7.7
       '@unocss/reset':
         specifier: ^0.59.0
         version: 0.59.4
