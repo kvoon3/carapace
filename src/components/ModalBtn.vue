@@ -19,7 +19,7 @@ const isShow = ref(false)
       </template>
       <template #actions>
         <section>
-          <button btn color-orange @click="isShow = false">
+          <button color-orange btn @click="isShow = false">
             Close
           </button>
         </section>

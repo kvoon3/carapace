@@ -9,7 +9,7 @@ const router = useRouter()
     </div>
     <RouterView />
     <div>
-      <button btn m="3 t8" bg-orange rounded-full color-white @click="router.back()">
+      <button m="3 t8" rounded-full bg-orange color-white btn @click="router.back()">
         BACK
       </button>
     </div>

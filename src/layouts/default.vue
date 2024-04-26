@@ -3,7 +3,7 @@
     <RouterView />
     <section mt6>
       <TheFooter />
-      <div mt4 color-coolgray-300 dark:color-coolGray-500 text-sm>
+      <div mt4 text-sm color-coolgray-300 dark:color-coolgray-500>
         [default layout]
       </div>
     </section>

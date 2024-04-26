@@ -34,7 +34,7 @@ function go(name: string) {
         @keydown.enter="go(name)"
       >
     </section>
-    <button :disabled="!name" rounded-full btn color-white bg-orange @click="go(name)">
+    <button :disabled="!name" rounded-full bg-orange color-white btn @click="go(name)">
       GO
     </button>
   </div>

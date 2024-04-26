@@ -4,13 +4,13 @@ const count = ref(0)
 
 <template>
   <div flex items-center justify-center>
-    <button bg-orange btn i-carbon-add size-6 @click="count++" />
+    <button i-carbon-add size-6 bg-orange btn @click="count++" />
     <input
       v-model.number="count"
-      outline-none active:outline-none
-      rounded-2 bg-slate-1 text-center dark:bg-dark py1.5
+
+      rounded-2 bg-slate-1 py1.5 text-center outline-none dark:bg-dark active:outline-none
       inputmode="numeric"
     >
-    <button size-6 bg-orange btn i-carbon-subtract @click="count--" />
+    <button i-carbon-subtract size-6 bg-orange btn @click="count--" />
   </div>
 </template>

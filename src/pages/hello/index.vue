@@ -10,7 +10,7 @@ const router = useRouter()
 <template>
   <div space-y-6>
     <div>Hello Index Page</div>
-    <button btn bg-orange rounded-full @click="() => router.back()">
+    <button rounded-full bg-orange btn @click="() => router.back()">
       BACK
     </button>
   </div>
