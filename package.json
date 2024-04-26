@@ -53,6 +53,7 @@
     "eslint-plugin-markdown": "^4.0.1",
     "eslint-plugin-vue": "^9.24.0",
     "https-localhost": "^4.7.1",
+    "jsdom": "^24.0.0",
     "lint-staged": "^15.2.2",
     "nprogress": "^0.2.0",
     "portal-vue": "^2.1.7",
