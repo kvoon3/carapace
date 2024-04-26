@@ -48,7 +48,6 @@
     "@unocss/transformer-variant-group": "^0.59.0",
     "bundle-require": "^4.0.3",
     "eslint": "^9.0.0",
-    "eslint-plugin-command": "^0.1.2",
     "eslint-plugin-format": "^0.1.1",
     "eslint-plugin-markdown": "^4.0.1",
     "eslint-plugin-vue": "^9.24.0",
