@@ -29,5 +29,26 @@
     "json",
     "jsonc",
     "yaml"
-  ]
+  ],
+  // index file will rename to folder name in vscode
+  // example: `components/Modal/index.vue` -> `(Modal).vue`
+  "workbench.editor.customLabels.patterns": {
+    // components
+    "**/components/**/index.jsx": "(${dirname}).${extname}",
+    "**/components/**/index.tsx": "(${dirname}).${extname}",
+    "**/components/**/index.vue": "(${dirname}).${extname}",
+    "**/index.component.jsx": "(${dirname}).${extname}",
+    "**/index.component.tsx": "(${dirname}).${extname}",
+    "**/index.component.vue": "(${dirname}).${extname}",
+    // page/view
+    "**/pages/**/index.jsx": "(${dirname}).${extname}",
+    "**/pages/**/index.tsx": "(${dirname}).${extname}",
+    "**/pages/**/index.vue": "(${dirname}).${extname}",
+    "**/views/**/index.jsx": "(${dirname}).${extname}",
+    "**/views/**/index.tsx": "(${dirname}).${extname}",
+    "**/views/**/index.vue": "(${dirname}).${extname}",
+    // js/ts
+    "**/index.ts": "(${dirname}).${extname}",
+    "**/index.js": "(${dirname}).${extname}"
+  }
 }
