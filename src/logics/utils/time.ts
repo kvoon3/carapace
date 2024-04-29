@@ -23,7 +23,12 @@ export function parseCompactFullDate(date: string): Date {
 }
 
 export function isTimeAgo(date: Date, opt: { now?: Date, unit: TimeUnit, times?: number }) {
-  const now = opt.now || new Date()
+  const {
+    now = new Date(),
+    unit,
+    times = 1,
+  } = opt
+
   const diff = now.getTime() - date.getTime()
-  return diff > opt.unit * (opt.times || 1)
+  return diff > unit * (times)
 }
