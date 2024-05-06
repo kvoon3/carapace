@@ -1,6 +1,6 @@
 {
   "eslint.experimental.useFlatConfig": true,
-  "prettier.enable": false,
+  "prettier.enable": true,
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
@@ -28,8 +28,15 @@
     "markdown",
     "json",
     "jsonc",
-    "yaml"
+    "yaml",
+    "toml",
+    "gql",
+    "graphql",
+    "css",
+    "scss",
+    "less"
   ],
+  "eslint.format.enable": true,
   // index file will rename to folder name in vscode
   // example: `components/Modal/index.vue` -> `(Modal).vue`
   "workbench.editor.customLabels.patterns": {
