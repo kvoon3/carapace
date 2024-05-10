@@ -196,7 +196,7 @@ export default defineConfig(({ mode }) => {
         limit: {
           latestTime: 'create',
           date: {
-            unit: TimeUnit.MINUTE,
+            unit: TimeUnit.DAY,
             times: 60,
           },
           num: 20,
