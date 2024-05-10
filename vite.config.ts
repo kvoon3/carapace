@@ -15,10 +15,11 @@ import WebfontDownload from 'vite-plugin-webfont-dl'
 import Markdown from 'unplugin-vue-markdown/vite'
 import Shiki from '@shikijs/markdown-it'
 import Anchor from 'markdown-it-anchor'
+import CreateDir from 'unplugin-create-dir/vite'
+import LimitFiles from 'unplugin-limit-files/vite'
+import { TimeUnit } from 'unplugin-limit-files/types'
 import { name } from './package.json'
-import CreateDir from './plugins/create-dir'
-import LimitFile from './plugins/file-limit'
-import { TimeUnit, genCompactFullDate, isTimeAgo, parseCompactFullDate } from './src/logics/utils/time'
+import { genCompactFullDate } from './src/logics/utils/time'
 import { sortToLast } from './src/logics/utils/array'
 
 export default defineConfig(({ mode }) => {
@@ -190,13 +191,15 @@ export default defineConfig(({ mode }) => {
       /**
        * plugins/limit-file.ts
        */
-      LimitFile({
-        path: './pkg',
-        limit: 20,
-        customFilter(fileName) {
-          const [_, date, __] = fileName.split('.')
-          const createTime = parseCompactFullDate(date)
-          return isTimeAgo(createTime, { unit: TimeUnit.MONTH, times: 4 })
+      LimitFiles({
+        filePattern: ['./pkg/*.zip'],
+        limit: {
+          latestTime: 'create',
+          date: {
+            unit: TimeUnit.MINUTE,
+            times: 60,
+          },
+          num: 20,
         },
       }),
     ],
