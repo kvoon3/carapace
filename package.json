@@ -65,7 +65,7 @@
     "unplugin-auto-import": "^0.17.5",
     "unplugin-compression": "^0.0.6",
     "unplugin-create-dir": "^0.1.1",
-    "unplugin-limit-files": "^0.2.0",
+    "unplugin-limit-files": "^0.2.2",
     "unplugin-vue-components": "^0.27.0",
     "unplugin-vue-inspector": "^2.1.0",
     "unplugin-vue-macros": "^2.9.2",

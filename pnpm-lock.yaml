@@ -142,8 +142,8 @@ importers:
         specifier: ^0.1.1
         version: 0.1.1(esbuild@0.20.2)(vite@5.2.10(@types/node@20.12.11)(terser@5.31.0))
       unplugin-limit-files:
-        specifier: ^0.2.0
-        version: 0.2.0(esbuild@0.20.2)(vite@5.2.10(@types/node@20.12.11)(terser@5.31.0))
+        specifier: ^0.2.2
+        version: 0.2.2(esbuild@0.20.2)(vite@5.2.10(@types/node@20.12.11)(terser@5.31.0))
       unplugin-vue-components:
         specifier: ^0.27.0
         version: 0.27.0(@babel/parser@7.24.5)(vue@2.7.16)
@@ -4181,8 +4181,8 @@ packages:
       webpack:
         optional: true
 
-  unplugin-limit-files@0.2.0:
-    resolution: {integrity: sha512-00KENEGAZxBdMViZ/90XERkpON9KTxPtHlcHlnGEWhFWdPJtobmN/K2sYd3qtKU65owS/nHVyxHi9l2k7xOfqA==}
+  unplugin-limit-files@0.2.2:
+    resolution: {integrity: sha512-4Z9PRAFRdOpM7IUy4WLMIc80HJl1uHpdddSJU42usuCpiVuaPyWdqj0kMxYK08hAOEpriGWRe3zCJiCw4sTZog==}
     peerDependencies:
       '@nuxt/kit': ^3
       '@nuxt/schema': ^3
@@ -9131,8 +9131,9 @@ snapshots:
       esbuild: 0.20.2
       vite: 5.2.10(@types/node@20.12.11)(terser@5.31.0)
 
-  unplugin-limit-files@0.2.0(esbuild@0.20.2)(vite@5.2.10(@types/node@20.12.11)(terser@5.31.0)):
+  unplugin-limit-files@0.2.2(esbuild@0.20.2)(vite@5.2.10(@types/node@20.12.11)(terser@5.31.0)):
     dependencies:
+      fast-glob: 3.3.2
       unplugin: 1.10.1
     optionalDependencies:
       esbuild: 0.20.2
