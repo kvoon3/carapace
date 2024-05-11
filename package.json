@@ -16,7 +16,8 @@
     "test --coverage": "vitest run --coverage",
     "up": "taze major -I",
     "postinstall": "nlx simple-git-hooks",
-    "ls-lint": "ls-lint"
+    "ls-lint": "ls-lint",
+    "release": "bumpp"
   },
   "dependencies": {
     "@antfu/utils": "^0.7.8",
@@ -47,6 +48,7 @@
     "@unocss/preset-uno": "^0.59.4",
     "@unocss/transformer-directives": "^0.59.4",
     "@unocss/transformer-variant-group": "^0.59.4",
+    "bumpp": "^9.4.1",
     "bundle-require": "^4.1.0",
     "eslint": "^9.1.1",
     "eslint-plugin-format": "^0.1.1",
