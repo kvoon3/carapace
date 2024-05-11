@@ -133,17 +133,17 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
       unplugin-auto-import:
-        specifier: ^0.17.5
-        version: 0.17.5(@vueuse/core@10.9.0(vue@2.7.16))
+        specifier: ^0.17.6
+        version: 0.17.6(@vueuse/core@10.9.0(vue@2.7.16))
       unplugin-compression:
         specifier: ^0.0.6
         version: 0.0.6
       unplugin-create-dir:
-        specifier: ^0.1.1
-        version: 0.1.1(esbuild@0.20.2)(vite@5.2.10(@types/node@20.12.11)(terser@5.31.0))
+        specifier: ^0.1.2
+        version: 0.1.2(esbuild@0.20.2)(vite@5.2.10(@types/node@20.12.11)(terser@5.31.0))
       unplugin-limit-files:
-        specifier: ^0.2.2
-        version: 0.2.2(esbuild@0.20.2)(vite@5.2.10(@types/node@20.12.11)(terser@5.31.0))
+        specifier: ^0.2.4
+        version: 0.2.4(esbuild@0.20.2)(vite@5.2.10(@types/node@20.12.11)(terser@5.31.0))
       unplugin-vue-components:
         specifier: ^0.27.0
         version: 0.27.0(@babel/parser@7.24.5)(vue@2.7.16)
@@ -4125,8 +4125,8 @@ packages:
     resolution: {integrity: sha512-pjy2bYhSsufwWlKwPc+l3cN7+wuJlK6uz0YdJEOlQDbl6jo/YlPi4mb8agUkVC8BF7V8NuzeyPNqRksA3hztKQ==}
     engines: {node: '>= 0.8'}
 
-  unplugin-auto-import@0.17.5:
-    resolution: {integrity: sha512-fHNDkDSxv3PGagX1wmKBYBkgaM4AKAgZmdJw/bxjhNljx9KSXSgHpGfX0MwUrq9qw6q1bhHIZVWyOwoY2koo4w==}
+  unplugin-auto-import@0.17.6:
+    resolution: {integrity: sha512-dmX0Pex5DzMzVuALkexboOZvh51fL/BD6aoPO7qHoTYGlQp0GRKsREv2KMF1lzYI9SXKQiRxAjwzbQnrFFNydQ==}
     engines: {node: '>=14'}
     peerDependencies:
       '@nuxt/kit': ^3.2.2
@@ -4158,8 +4158,8 @@ packages:
   unplugin-compression@0.0.6:
     resolution: {integrity: sha512-BdCUljj3oAHcCDSqNiAZQqog3jhgf11aBF9MxLjs7ixGEQ9X5M+JBVpmEMzM8w+dvDr0HxzGSvedxMizFyYXMA==}
 
-  unplugin-create-dir@0.1.1:
-    resolution: {integrity: sha512-J2MUUSYi9u/zflzGSWNgx+3YBKUNHWm34WbqlXfWZkMRCguJNti3wyxBG1XyZGz4tznoAu1Or9H0v8VNLfonvQ==}
+  unplugin-create-dir@0.1.2:
+    resolution: {integrity: sha512-eIazN+CYKIRLOUM/WYSsBOGZOwBMDGBj/iSN+1a3+rHCH5i+NXSfAsVL5N4t4QN381g2X+cm1toen/QWuh2eLQ==}
     peerDependencies:
       '@nuxt/kit': ^3
       '@nuxt/schema': ^3
@@ -4181,8 +4181,8 @@ packages:
       webpack:
         optional: true
 
-  unplugin-limit-files@0.2.2:
-    resolution: {integrity: sha512-4Z9PRAFRdOpM7IUy4WLMIc80HJl1uHpdddSJU42usuCpiVuaPyWdqj0kMxYK08hAOEpriGWRe3zCJiCw4sTZog==}
+  unplugin-limit-files@0.2.4:
+    resolution: {integrity: sha512-KpZ3BSnQKFRwcaaN/JR7jY4MUjhRpI8MT3BuUQ7+sLpc09GbDpncA54OP44kRiTqfhJxGt4ACA+IQcnKYUsDWQ==}
     peerDependencies:
       '@nuxt/kit': ^3
       '@nuxt/schema': ^3
@@ -9094,7 +9094,7 @@ snapshots:
 
   unpipe@1.0.0: {}
 
-  unplugin-auto-import@0.17.5(@vueuse/core@10.9.0(vue@2.7.16)):
+  unplugin-auto-import@0.17.6(@vueuse/core@10.9.0(vue@2.7.16)):
     dependencies:
       '@antfu/utils': 0.7.8
       '@rollup/pluginutils': 5.1.0
@@ -9124,14 +9124,14 @@ snapshots:
       picocolors: 1.0.0
       unplugin: 1.10.1
 
-  unplugin-create-dir@0.1.1(esbuild@0.20.2)(vite@5.2.10(@types/node@20.12.11)(terser@5.31.0)):
+  unplugin-create-dir@0.1.2(esbuild@0.20.2)(vite@5.2.10(@types/node@20.12.11)(terser@5.31.0)):
     dependencies:
       unplugin: 1.10.1
     optionalDependencies:
       esbuild: 0.20.2
       vite: 5.2.10(@types/node@20.12.11)(terser@5.31.0)
 
-  unplugin-limit-files@0.2.2(esbuild@0.20.2)(vite@5.2.10(@types/node@20.12.11)(terser@5.31.0)):
+  unplugin-limit-files@0.2.4(esbuild@0.20.2)(vite@5.2.10(@types/node@20.12.11)(terser@5.31.0)):
     dependencies:
       fast-glob: 3.3.2
       unplugin: 1.10.1

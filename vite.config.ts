@@ -17,7 +17,6 @@ import Shiki from '@shikijs/markdown-it'
 import Anchor from 'markdown-it-anchor'
 import CreateDir from 'unplugin-create-dir/vite'
 import LimitFiles from 'unplugin-limit-files/vite'
-import { TimeUnit } from 'unplugin-limit-files/types'
 import { name } from './package.json'
 import { genCompactFullDate } from './src/logics/utils/time'
 import { sortToLast } from './src/logics/utils/array'
@@ -195,9 +194,8 @@ export default defineConfig(({ mode }) => {
         filePattern: ['./pkg/*.zip'],
         limit: {
           latestTime: 'create',
-          date: {
-            unit: TimeUnit.DAY,
-            times: 60,
+          time: {
+            day: 60,
           },
           num: 20,
         },
