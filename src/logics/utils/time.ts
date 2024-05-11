@@ -1,9 +1,3 @@
-export enum TimeUnit {
-  MONTH = 2592000000,
-  DAY = 86400000,
-  MINUTE = 60000,
-}
-
 export function genCompactFullDate(date: Date): string {
   return [
     date.getFullYear(),
@@ -20,15 +14,4 @@ export function parseCompactFullDate(date: string): Date {
   const minutes = date.substring(10, 12)
   const seconds = date.substring(12, 14)
   return new Date(+year, +month - 1, +day, +hours, +minutes, +seconds)
-}
-
-export function isTimeAgo(date: Date, opt: { now?: Date, unit: TimeUnit, times?: number }) {
-  const {
-    now = new Date(),
-    unit,
-    times = 1,
-  } = opt
-
-  const diff = now.getTime() - date.getTime()
-  return diff > unit * (times)
 }
