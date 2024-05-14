@@ -11,6 +11,8 @@
 - UnoCSS - atomic CSS engine
 - Pinia - state management
 - Eruda - mobile debug
+- PortalVue - Using `<Portal>` like `<Teleport>` in Vue 3
+- Markdown Support - use shiki for rendering markdown content
 - Vitest - for unit test
 - APIs Auto Importing - import composition API or other directly
 - Layout system
