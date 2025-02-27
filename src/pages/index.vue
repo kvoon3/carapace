@@ -6,6 +6,18 @@ const name = ref('')
 function go(name: string) {
   router.push(`/hello/${name}`)
 }
+
+async function test() {
+  const res = await fetch('/v1/corp/web/login', {
+    method: 'post',
+  })
+
+  const data = res.json()
+  // eslint-disable-next-line no-console
+  console.log('data', data)
+}
+
+test()
 </script>
 
 <template>
