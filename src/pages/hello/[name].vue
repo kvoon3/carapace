@@ -18,12 +18,12 @@ const router = useRouter()
       <div text-xl>
         Hi, <span color-green> {{ props.name }} </span>
       </div>
-      <div text-coolgray-400 font-italic>
+      <div text-neutral-400 font-italic>
         Here was a dynamic route
       </div>
     </section>
     <TheCounter />
-    <button rounded-full bg-coolgray-400 bg-orange color-white btn @click="() => router.back()">
+    <button rounded-full bg-neutral-400 bg-orange color-white btn @click="() => router.back()">
       BACK
     </button>
   </div>

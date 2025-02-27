@@ -17,7 +17,7 @@ function go(name: string) {
       <div text="orange xl">
         Carapace
       </div>
-      <div text-coolgray-400 font-italic>
+      <div text-neutral-400 font-italic>
         Start Template For
         <span color="green">
           Vue 2.7
