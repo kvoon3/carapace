@@ -22,10 +22,6 @@ You can also use vue component in markdown page:
 <ModalBtn classes="bg-orange rounded-full text-white" title="Modal" text="Open a Modal">
   <template>
   <p>
-    Hi! You opened me, and you can close me now.
-  </p>
-  <br>
-  <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam exercitationem nulla sapiente? Eveniet assumenda nihil, adipisci ipsum consectetur incidunt maxime error, optio cumque, atque ipsa aliquid porro maiores itaque officia?
   </p>
   </template>
