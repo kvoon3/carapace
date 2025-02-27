@@ -27,6 +27,7 @@ export default defineConfig(({ mode }) => {
   return {
     define: {
       __APP_ENV__: env.APP_ENV,
+      __BUILD_AT__: `${new Date().getTime()}`,
     },
     resolve: {
       alias: {
