@@ -23,7 +23,7 @@ const buildAt = new Intl.DateTimeFormat(
       <a flex title="Github" items-center href="https://github.com/kwongliegaai/carapace">
         <button i-carbon-logo-github size-6 color-coolgray dark:color-coolgray-500 />
       </a>
-      <button title="Toggle theme" i-carbon-sun size-6 bg-orange dark="color-indigo i-carbon-moon color-coolgray-500 size-6 " @click="toggleDark()" />
+      <button title="Toggle theme" i-carbon-sun size-6 bg-yellow dark="color-indigo i-carbon-moon color-coolgray-500 size-6 " @click="toggleDark()" />
     </div>
     <div mt4 text-sm text-coolgray-4>
       Build At: <span underline underline-coolgray4>{{ buildAt }}</span>

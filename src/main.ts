@@ -10,6 +10,9 @@ import '@unocss/reset/normalize.css'
 import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
 
+import 'floating-vue/dist/style.css'
+import './styles/global.css'
+
 useFavicon({
   href: {
     light: '/favicon.svg',

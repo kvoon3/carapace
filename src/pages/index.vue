@@ -14,7 +14,7 @@ function go(name: string) {
       <div>
         <i i-carbon-chart-bubble-packed inline-block size-12 />
       </div>
-      <div text="orange xl">
+      <div text="primary xl">
         Carapace
       </div>
       <div text-neutral-400 font-italic>
