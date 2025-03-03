@@ -23,7 +23,7 @@ const router = useRouter()
       </div>
     </section>
     <TheCounter />
-    <button rounded-full bg-neutral-400 bg-orange color-white btn @click="() => router.back()">
+    <button btn-primary @click="() => router.back()">
       BACK
     </button>
   </div>

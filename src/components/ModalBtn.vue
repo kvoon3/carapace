@@ -11,7 +11,7 @@ const isModalOpen = ref(false)
 <template>
   <div>
     <TheModal v-model="isModalOpen" :title="title">
-      <button btn :class="props.classes" @click="isModalOpen = !isModalOpen">
+      <button btn-primary :class="props.classes" @click="isModalOpen = !isModalOpen">
         {{ text }}
       </button>
       <template #content>

@@ -11,12 +11,38 @@ import {
 
 export default defineConfig({
   // ...
+  theme: {
+    colors: {
+      primary: {
+        100: '#fee3d0',
+        200: '#fdc7a2',
+        300: '#fbab73',
+        400: '#fa8f45',
+        DEFAULT: '#fa8f45',
+        500: '#f97316',
+        600: '#c75c12',
+        700: '#95450d',
+        800: '#642e09',
+        900: '#321704',
+      },
+    },
+  },
   shortcuts: {
-    'bg-base': 'bg-white dark:bg-black',
-    'bg-base-2': 'bg-neutral-1 dark:bg-dark',
+    'color-base': 'color-neutral-800 dark:color-neutral-300',
+    'bg-base': 'bg-white dark:bg-#111',
+    'bg-secondary': 'bg-#eee dark:bg-#222',
+    'border-base': 'border-#8882',
+
+    'bg-tooltip': 'bg-white:75 dark:bg-#111:75 backdrop-blur-8',
+
     'text-base': 'text-gray-800 dark:text-white',
-    'btn': 'm-2 px-4 leading-loose opacity-100 hover:opacity-70',
-    'position-center': 'left-50% top-50% translate--50%',
+    'btn': 'm-2 px-4 leading-loose opacity-100 hover:op70 rounded-full disabled:bg-neutral-400 disabled:pointer-event-none',
+    'btn-primary': 'btn bg-primary text-white',
+    'btn-secondary': 'btn bg-secondary text-base',
+    'btn-outline': 'btn border border-neutral-400 text-neutral-400',
+    'position-x-center': 'left-50% translate-x--50%',
+    'position-y-center': 'top-50% translate-y--50%',
+    'position-center': 'position-x-center position-y-center',
   },
   presets: [
     presetUno(),
@@ -41,7 +67,7 @@ export default defineConfig({
       cssExtend:
       {
         'h1,h2,h3,h4,h5,h6': {
-          color: 'orange',
+          color: '#fa8f45',
         },
         'blockquote': {
           color: '#bbb',
