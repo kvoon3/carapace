@@ -6,7 +6,7 @@
   "packageManager": "pnpm@9.12.1",
   "scripts": {
     "build": "vite build",
-    "dev": "vite --host --port 8080",
+    "dev": "vite --host",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:inspect": "npx @eslint/config-inspector",
