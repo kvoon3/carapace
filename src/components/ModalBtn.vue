@@ -5,24 +5,17 @@ const props = defineProps<{
   title: string
 }>()
 
-const isShow = ref(false)
+const isModalOpen = ref(false)
 </script>
 
 <template>
   <div>
-    <button btn :class="props.classes" @click="isShow = !isShow">
-      {{ text }}
-    </button>
-    <TheModal :show="isShow" :title="title">
+    <TheModal v-model="isModalOpen" :title="title">
+      <button btn :class="props.classes" @click="isModalOpen = !isModalOpen">
+        {{ text }}
+      </button>
       <template #content>
         <slot />
-      </template>
-      <template #actions>
-        <section>
-          <button color-orange btn @click="isShow = false">
-            Close
-          </button>
-        </section>
       </template>
     </TheModal>
   </div>

@@ -1,10 +1,10 @@
+import type { UserModule } from './types'
 import { setupLayouts } from 'virtual:generated-layouts'
 import generatedRoutes from 'virtual:generated-pages'
 import App from './App.vue'
-import { setup } from './logics/helpers/setup'
 import { useFavicon } from './composition/browser/useFavicon'
 
-import type { UserModule } from './types'
+import { setup } from './logics/helpers/setup'
 
 import '@unocss/reset/normalize.css'
 import '@unocss/reset/tailwind.css'

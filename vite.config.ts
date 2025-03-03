@@ -1,25 +1,25 @@
 import path from 'node:path'
 import process from 'node:process'
-import { defineConfig, loadEnv } from 'vite'
-import Vue from '@vitejs/plugin-vue2'
-import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
-import VueMacros from 'unplugin-vue-macros/dist/vite'
-import UnoCSS from 'unocss/vite'
-import legacy from '@vitejs/plugin-legacy'
-import Pages from 'vite-plugin-pages'
-import Layouts from 'vite-plugin-vue-layouts'
-import Inspector from 'vite-plugin-vue-inspector'
-import Compression from 'unplugin-compression/vite'
-import WebfontDownload from 'vite-plugin-webfont-dl'
-import Markdown from 'unplugin-vue-markdown/vite'
 import Shiki from '@shikijs/markdown-it'
+import legacy from '@vitejs/plugin-legacy'
+import Vue from '@vitejs/plugin-vue2'
 import Anchor from 'markdown-it-anchor'
+import UnoCSS from 'unocss/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import Compression from 'unplugin-compression/vite'
 import CreateDir from 'unplugin-create-dir/vite'
 import LimitFiles from 'unplugin-limit-files/vite'
+import Components from 'unplugin-vue-components/vite'
+import VueMacros from 'unplugin-vue-macros/dist/vite'
+import Markdown from 'unplugin-vue-markdown/vite'
+import { defineConfig, loadEnv } from 'vite'
+import Pages from 'vite-plugin-pages'
+import Inspector from 'vite-plugin-vue-inspector'
+import Layouts from 'vite-plugin-vue-layouts'
+import WebfontDownload from 'vite-plugin-webfont-dl'
 import { name } from './package.json'
-import { genCompactFullDate } from './src/logics/utils/time'
 import { sortToLast } from './src/logics/utils/array'
+import { genCompactFullDate } from './src/logics/utils/time'
 
 export default defineConfig(({ mode }) => {
   // load env variables according to mode
@@ -49,6 +49,9 @@ export default defineConfig(({ mode }) => {
       VueMacros({
         defineProp: {
           edition: 'johnsonEdition',
+        },
+        defineModels: {
+          unified: false,
         },
         plugins: {
           vue: Vue({

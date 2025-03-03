@@ -12,7 +12,8 @@ const { load } = useScriptTag(
         window.eruda.init()
         window.eruda
           ?.get('console')
-          ?.config.set('displayExtraInfo', true)
+          ?.config
+          .set('displayExtraInfo', true)
       }
       else {
         if (window.eruda._isInit)

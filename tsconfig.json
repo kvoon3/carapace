@@ -28,7 +28,13 @@
     "plugins": [
       "@vue-macros/volar/define-models",
       "@vue-macros/volar/define-slots"
-    ]
+    ],
+    "vueMacros": {
+      "defineModels": {
+        // 仅在 target 是 2.7 时有效
+        "unified": false
+      }
+    }
   },
   "exclude": ["dist", "node_modules", "cypress"]
 }
